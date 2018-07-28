@@ -1,0 +1,110 @@
+[
+  {
+  "id": 703448,
+  "name": "Kiev",
+  "country": "UA",
+  "coord": {
+    "lon": 30.516666,
+    "lat": 50.433334
+  }
+  },
+  {
+    "id": 706483,
+    "name": "Kharkiv",
+    "country": "UA",
+    "coord": {
+      "lon": 36.25,
+      "lat": 50
+    }
+  },
+  {
+    "id": 702550,
+    "name": "Lviv",
+    "country": "UA",
+    "coord": {
+      "lon": 24.023239,
+      "lat": 49.838261
+    }
+  },
+  {
+    "id": 692194,
+    "name": "Sumy",
+    "country": "UA",
+    "coord": {
+      "lon": 34.800289,
+      "lat": 50.9216
+    }
+  },
+  {
+    "id": 710735,
+    "name": "Chernihiv",
+    "country": "UA",
+    "coord": {
+      "lon": 31.28488,
+      "lat": 51.505508
+    }
+  },
+  {
+    "id": 710791,
+    "name": "Cherkasy",
+    "country": "UA",
+    "coord": {
+      "lon": 32.062069,
+      "lat": 49.428539
+    }
+  },
+  {
+    "id": 706369,
+    "name": "Khmelnytskyy",
+    "country": "UA",
+    "coord": {
+      "lon": 26.996531,
+      "lat": 49.421612
+    }
+  },
+  {
+    "id": 700569,
+    "name": "Mykolayiv",
+    "country": "UA",
+    "coord": {
+      "lon": 31.9974,
+      "lat": 46.965912
+    }
+  },
+  {
+    "id": 707565,
+    "name": "Irpin",
+    "country": "UA",
+    "coord": {
+      "lon": 30.250549,
+      "lat": 50.521751
+    }
+  },
+  {
+    "id": 696634,
+    "name": "Poltavs’ka Oblast’",
+    "country": "UA",
+    "coord": {
+      "lon": 34,
+      "lat": 49.5
+    }
+  },
+  {
+    "id": 702972,
+    "name": "Lisichansk",
+    "country": "UA",
+    "coord": {
+      "lon": 38.44207,
+      "lat": 48.90485
+    }
+  },
+  {
+    "id": 710098,
+    "name": "Derhachy",
+    "country": "UA",
+    "coord": {
+      "lon": 36.12112,
+      "lat": 50.10659
+    }
+  }
+]

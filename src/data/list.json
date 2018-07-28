@@ -1,0 +1,614 @@
+[
+  {
+    "id": 6559561,
+    "name": "Sedella",
+    "country": "ES",
+    "coord": {
+      "lon": -4.03314,
+      "lat": 36.86232
+    }
+  },
+  {
+    "id": 6356959,
+    "name": "San José del Valle",
+    "country": "ES",
+    "coord": {
+      "lon": -5.69443,
+      "lat": 36.608452
+    }
+  },
+  {
+    "id": 711349,
+    "name": "Bucha",
+    "country": "UA",
+    "coord": {
+      "lon": 30.366671,
+      "lat": 50.583328
+    }
+  },
+  {
+    "id": 798544,
+    "name": "Republic of Poland",
+    "country": "PL",
+    "coord": {
+      "lon": 20,
+      "lat": 52
+    }
+  },
+  {
+    "id": 3094325,
+    "name": "Kuchary",
+    "country": "PL",
+    "coord": {
+      "lon": 19.383329,
+      "lat": 52.150002
+    }
+  },
+  {
+    "id": 6255149,
+    "name": "North America",
+    "country": "",
+    "coord": {
+      "lon": -100.546883,
+      "lat": 46.073231
+    }
+  },
+  {
+    "id": 3575514,
+    "name": "Brumaire",
+    "country": "KN",
+    "coord": {
+      "lon": -62.73333,
+      "lat": 17.299999
+    }
+  },
+  {
+    "id": 1861387,
+    "name": "Ishikawa-ken",
+    "country": "JP",
+    "coord": {
+      "lon": 136.770493,
+      "lat": 36.77145
+    }
+  },
+  {
+    "id": 1857578,
+    "name": "Matoba",
+    "country": "JP",
+    "coord": {
+      "lon": 133.949997,
+      "lat": 34.25
+    }
+  },
+  {
+    "id": 1299298,
+    "name": "Pya",
+    "country": "MM",
+    "coord": {
+      "lon": 95.599998,
+      "lat": 21.51667
+    }
+  },
+  {
+    "id": 3256023,
+    "name": "Kalanac",
+    "country": "BA",
+    "coord": {
+      "lon": 18.78389,
+      "lat": 44.86861
+    }
+  },
+  {
+    "id": 2921044,
+    "name": "Federal Republic of Germany",
+    "country": "DE",
+    "coord": {
+      "lon": 10.5,
+      "lat": 51.5
+    }
+  },
+  {
+    "id": 2861876,
+    "name": "Land Nordrhein-Westfalen",
+    "country": "DE",
+    "coord": {
+      "lon": 7,
+      "lat": 51.5
+    }
+  },
+  {
+  "id": 703448,
+  "name": "Kiev",
+  "country": "UA",
+  "coord": {
+    "lon": 30.516666,
+    "lat": 50.433334
+  }
+  },
+  {
+    "id": 706483,
+    "name": "Kharkiv",
+    "country": "UA",
+    "coord": {
+      "lon": 36.25,
+      "lat": 50
+    }
+  },
+  {
+    "id": 702550,
+    "name": "Lviv",
+    "country": "UA",
+    "coord": {
+      "lon": 24.023239,
+      "lat": 49.838261
+    }
+  },
+  {
+    "id": 692194,
+    "name": "Sumy",
+    "country": "UA",
+    "coord": {
+      "lon": 34.800289,
+      "lat": 50.9216
+    }
+  },
+  {
+    "id": 710735,
+    "name": "Chernihiv",
+    "country": "UA",
+    "coord": {
+      "lon": 31.28488,
+      "lat": 51.505508
+    }
+  },
+  {
+    "id": 710791,
+    "name": "Cherkasy",
+    "country": "UA",
+    "coord": {
+      "lon": 32.062069,
+      "lat": 49.428539
+    }
+  },
+  {
+    "id": 706369,
+    "name": "Khmelnytskyy",
+    "country": "UA",
+    "coord": {
+      "lon": 26.996531,
+      "lat": 49.421612
+    }
+  },
+  {
+    "id": 708421,
+    "name": "Gorki",
+    "country": "UA",
+    "coord": {
+      "lon": 37.549999,
+      "lat": 48.716671
+    }
+  },
+  {
+    "id": 700569,
+    "name": "Mykolayiv",
+    "country": "UA",
+    "coord": {
+      "lon": 31.9974,
+      "lat": 46.965912
+    }
+  },
+  {
+    "id": 689487,
+    "name": "Vyshneve",
+    "country": "UA",
+    "coord": {
+      "lon": 30.370501,
+      "lat": 50.38913
+    }
+  },
+  {
+    "id": 707565,
+    "name": "Irpin",
+    "country": "UA",
+    "coord": {
+      "lon": 30.250549,
+      "lat": 50.521751
+    }
+  },
+  {
+    "id": 696634,
+    "name": "Poltavs’ka Oblast’",
+    "country": "UA",
+    "coord": {
+      "lon": 34,
+      "lat": 49.5
+    }
+  },
+  {
+    "id": 692975,
+    "name": "Stakhanov",
+    "country": "UA",
+    "coord": {
+      "lon": 38.64352,
+      "lat": 48.56818
+    }
+  },
+  {
+    "id": 691999,
+    "name": "Syeverodonetsk",
+    "country": "UA",
+    "coord": {
+      "lon": 38.491661,
+      "lat": 48.948318
+    }
+  },
+  {
+    "id": 713716,
+    "name": "Alchevsk",
+    "country": "UA",
+    "coord": {
+      "lon": 38.816689,
+      "lat": 48.468929
+    }
+  },
+  {
+    "id": 709248,
+    "name": "Fastiv",
+    "country": "UA",
+    "coord": {
+      "lon": 29.9177,
+      "lat": 50.076698
+    }
+  },
+  {
+    "id": 688746,
+    "name": "Vynohradiv",
+    "country": "UA",
+    "coord": {
+      "lon": 22.76667,
+      "lat": 48.150002
+    }
+  },
+  {
+    "id": 695592,
+    "name": "Rivnens’ka Oblast’",
+    "country": "UA",
+    "coord": {
+      "lon": 26.5,
+      "lat": 51
+    }
+  },
+  {
+    "id": 703464,
+    "name": "Kuznetsovsk",
+    "country": "UA",
+    "coord": {
+      "lon": 25.866671,
+      "lat": 51.683331
+    }
+  },
+  {
+    "id": 706165,
+    "name": "Khust",
+    "country": "UA",
+    "coord": {
+      "lon": 23.299089,
+      "lat": 48.179298
+    }
+  },
+  {
+    "id": 689559,
+    "name": "Vinnyts’ka Oblast’",
+    "country": "UA",
+    "coord": {
+      "lon": 29,
+      "lat": 49
+    }
+  },
+  {
+    "id": 706571,
+    "name": "Kozyatyn",
+    "country": "UA",
+    "coord": {
+      "lon": 28.833851,
+      "lat": 49.71431
+    }
+  },
+  {
+    "id": 702972,
+    "name": "Lisichansk",
+    "country": "UA",
+    "coord": {
+      "lon": 38.44207,
+      "lat": 48.90485
+    }
+  },
+  {
+    "id": 710098,
+    "name": "Derhachy",
+    "country": "UA",
+    "coord": {
+      "lon": 36.12112,
+      "lat": 50.10659
+    }
+  },
+  {
+    "id": 699942,
+    "name": "Nizhyn",
+    "country": "UA",
+    "coord": {
+      "lon": 31.886881,
+      "lat": 51.048012
+    }
+  },
+  {
+    "id": 712423,
+    "name": "Berehove",
+    "country": "UA",
+    "coord": {
+      "lon": 22.64418,
+      "lat": 48.205551
+    }
+  },
+  {
+    "id": 707688,
+    "name": "Illichivsk",
+    "country": "UA",
+    "coord": {
+      "lon": 30.654779,
+      "lat": 46.304951
+    }
+  },
+  {
+    "id": 707099,
+    "name": "Kalush",
+    "country": "UA",
+    "coord": {
+      "lon": 24.373079,
+      "lat": 49.011871
+    }
+  },
+  {
+    "id": 698138,
+    "name": "Ovidiopol",
+    "country": "UA",
+    "coord": {
+      "lon": 30.441271,
+      "lat": 46.249981
+    }
+  },
+  {
+    "id": 705135,
+    "name": "Konotop",
+    "country": "UA",
+    "coord": {
+      "lon": 33.202629,
+      "lat": 51.240318
+    }
+  },
+  {
+    "id": 686875,
+    "name": "Zolotonosha",
+    "country": "UA",
+    "coord": {
+      "lon": 32.037731,
+      "lat": 49.668861
+    }
+  },
+  {
+    "id": 687432,
+    "name": "Zdolbuniv",
+    "country": "UA",
+    "coord": {
+      "lon": 26.24251,
+      "lat": 50.520599
+    }
+  },
+  {
+    "id": 691255,
+    "name": "Trostyanets",
+    "country": "UA",
+    "coord": {
+      "lon": 34.962978,
+      "lat": 50.478432
+    }
+  },
+  {
+    "id": 690906,
+    "name": "Tyachiv",
+    "country": "UA",
+    "coord": {
+      "lon": 23.57061,
+      "lat": 48.011799
+    }
+  },
+  {
+    "id": 693468,
+    "name": "Sloviansk",
+    "country": "UA",
+    "coord": {
+      "lon": 37.616669,
+      "lat": 48.866669
+    }
+  },
+  {
+    "id": 690412,
+    "name": "Vasylkiv",
+    "country": "UA",
+    "coord": {
+      "lon": 30.313459,
+      "lat": 50.18692
+    }
+  },
+  {
+    "id": 698782,
+    "name": "Obukhiv",
+    "country": "UA",
+    "coord": {
+      "lon": 30.622721,
+      "lat": 50.10997
+    }
+  },
+  {
+    "id": 704920,
+    "name": "Korolevo",
+    "country": "UA",
+    "coord": {
+      "lon": 23.136589,
+      "lat": 48.15247
+    }
+  },
+  {
+    "id": 707559,
+    "name": "Irshava",
+    "country": "UA",
+    "coord": {
+      "lon": 23.03846,
+      "lat": 48.316669
+    }
+  },
+  {
+    "id": 713171,
+    "name": "Artëmovskiy Rayon",
+    "country": "UA",
+    "coord": {
+      "lon": 39.333328,
+      "lat": 48.566669
+    }
+  },
+  {
+    "id": 693709,
+    "name": "Skadovsk",
+    "country": "UA",
+    "coord": {
+      "lon": 32.91124,
+      "lat": 46.1161
+    }
+  },
+  {
+    "id": 688628,
+    "name": "Yablon’ki",
+    "country": "UA",
+    "coord": {
+      "lon": 30.216669,
+      "lat": 50.549999
+    }
+  },
+  {
+    "id": 702116,
+    "name": "Malyn",
+    "country": "UA",
+    "coord": {
+      "lon": 29.238331,
+      "lat": 50.772331
+    }
+  },
+  {
+    "id": 691715,
+    "name": "Teofipol’",
+    "country": "UA",
+    "coord": {
+      "lon": 26.41433,
+      "lat": 49.838181
+    }
+  },
+  {
+    "id": 703142,
+    "name": "Letychiv",
+    "country": "UA",
+    "coord": {
+      "lon": 27.63051,
+      "lat": 49.382629
+    }
+  },
+  {
+    "id": 689159,
+    "name": "Volochys’k",
+    "country": "UA",
+    "coord": {
+      "lon": 26.17185,
+      "lat": 49.5312
+    }
+  },
+  {
+    "id": 707296,
+    "name": "Izyaslav",
+    "country": "UA",
+    "coord": {
+      "lon": 26.821251,
+      "lat": 50.119469
+    }
+  },
+  {
+    "id": 693581,
+    "name": "Slavuta",
+    "country": "UA",
+    "coord": {
+      "lon": 26.865061,
+      "lat": 50.301552
+    }
+  },
+  {
+    "id": 694216,
+    "name": "Shepetivka",
+    "country": "UA",
+    "coord": {
+      "lon": 27.06365,
+      "lat": 50.185452
+    }
+  },
+  {
+    "id": 2504175,
+    "name": "Berhoum",
+    "country": "DZ",
+    "coord": {
+      "lon": 5.03386,
+      "lat": 35.654549
+    }
+  },
+  {
+    "id": 2498000,
+    "name": "El Idrissia",
+    "country": "DZ",
+    "coord": {
+      "lon": 2.52749,
+      "lat": 34.445419
+    }
+  },
+  {
+    "id": 2480395,
+    "name": "Sidi Hosni",
+    "country": "DZ",
+    "coord": {
+      "lon": 1.51988,
+      "lat": 35.4702
+    }
+  },
+  {
+    "id": 2480368,
+    "name": "Sidi Khaled",
+    "country": "DZ",
+    "coord": {
+      "lon": 4.98785,
+      "lat": 34.387001
+    }
+  },
+  {
+    "id": 2484202,
+    "name": "Aïn Zaouïa",
+    "country": "DZ",
+    "coord": {
+      "lon": 3.89416,
+      "lat": 36.548279
+    }
+  },
+  {
+    "id": 698740,
+    "name": "Odessa",
+    "country": "UA",
+    "coord": {
+      "lon": 30.732622,
+      "lat": 46.477474
+    }
+  }
+]
