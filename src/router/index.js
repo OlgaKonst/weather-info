@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import CardsList from '@/components/CadrsList';
-import CityPage from '@/pages/CityPage';
+import CardsList from '@/components/CardsList';
+import CityInfo from '@/components/CityInfo';
 
 Vue.use(Router);
 
@@ -15,7 +15,7 @@ export default new Router({
     {
       path: '/city/:id',
       name: 'City',
-      component: CityPage,
+      component: CityInfo,
       props: true,
     },
   ],

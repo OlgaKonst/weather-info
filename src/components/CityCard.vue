@@ -1,13 +1,15 @@
 <template>
-<router-link :to="{ name: 'City', params: { id: this.id } }">
-    <div class="city-card" @click="showMoreInfo($event)">
-    <div class="close-cart" @click="closeCard">Close</div>
-    <h3>Weather in {{ name }}, {{ country }}</h3>
-    <h4>{{temp}}&deg; C</h4>
-    <p>{{currentDate}}</p>
-    <button type="button" @click="updateWeather" class="btn-update">Update now</button>
+  <div class="city-card" @click="showMoreInfo($event)">
+      <div class="info">
+        <h3>Weather in {{ name }}, {{ country }}</h3>
+        <h4>{{temp}}&deg; C</h4>
+        <p>{{currentDate}}</p>
+      </div>
+    <div class="control">
+      <button type="button" @click="closeCard" class="btn">Close</button>
+      <button type="button" @click="updateWeather" class="btn">Update</button>
+    </div>
   </div>
-</router-link>
 </template>
 
 <script>
@@ -40,28 +42,16 @@ export default {
 		async updateWeather() {
 			this.weather = await getWeather(this.id);
 			this.temp = (this.weather.list[0].main.temp - 273.15).toFixed(0);
-			//console.log('weather ', this.weather);
 		},
 		closeCard() {
-			this.$store.commit('removeCity', this.id);
+      this.$store.commit('removeCity', this.id);
+      this.$store.dispatch('saveSelectedCities');
 		},
 		showMoreInfo(e) {
-			console.log('e.target ', e.target);
-			if (e.target.classList.contains('close-card') || e.target.classList.contains('btn-update')) {
-				console.log('include');
-				return;
-			} else {
-				this.$store.commit('selectedCard', this.weather);
-			}
+		  this.$store.commit('selectedCard', this.weather);
 		},
 	},
 	mounted() {
-		/* this.$store.dispatch('load');
-    const updateWeather = async () => {
-      const weather = await getWeather(this.id);
-      this.temp = (weather.list[0].main.temp - 273.15).toFixed(0);
-      console.log(weather)
-    } */
 		this.updateWeather();
 	},
 };
@@ -70,23 +60,30 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .city-card {
-	display: flex;
+  display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-start;
 	width: 300px;
-	border: 1px solid green;
 	padding: 10px;
 	margin: 5px 5px 15px;
+  padding: 20px 10px;
+  background-color: #fff;
 }
-.close-cart {
+.btn {
 	width: 100px;
-	border: 1px solid blue;
 	align-self: flex-end;
 	cursor: pointer;
 }
-a {
-  display: block;
+
+.router-link {
+  display: flex;
 	text-decoration: none;
-	color: #000;
+	color: #2c3e50;
+  	flex-direction: column;
+	justify-content: space-between;
+  align-items: center;
+}
+.control {
+  margin-top: auto;
 }
 </style>

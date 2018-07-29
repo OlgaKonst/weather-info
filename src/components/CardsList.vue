@@ -2,15 +2,16 @@
   <div>
     <form class="select-city">
     <div class="form-group">
-      <label for="cities">Choose a city</label>
+      <label for="cities">Select a city</label>
       <select class="form-control" id="cities" v-model="city" @change="addCity($event)">
         <option v-for="city in cities" :key="city.id" :value="city.id">
-          {{city.name}}
+          <router-link :to="{ name: 'City', params: { id: city.id } }">
+            {{city.name}}
+          </router-link>
         </option>
       </select>
     </div>
     </form>
-    <p>{{city}}</p>
     <div class="city-list">
       <CityCard v-for="city in selectedCities" :name="city.name"
       :country="city.country" :id="city.id" :key="city.id"/>
@@ -38,12 +39,16 @@ export default {
 	},
 	methods: {
 		addCity(e) {
-      this.$store.dispatch('addCity', this.city);
+			this.$store.dispatch('addCity', this.city);
+			this.$store.dispatch('saveSelectedCities');
 		},
 	},
 	mounted() {
 		this.$store.dispatch('load');
 		this.$store.dispatch('loadSelected');
+	},
+	beforeDestroy() {
+		this.$store.dispatch('saveSelectedCities');
 	},
 };
 </script>
@@ -52,9 +57,11 @@ export default {
 <style scoped>
 .city-list {
 	display: flex;
+	align-items: stretch;
 	flex-wrap: wrap;
-	border: 1px solid red;
 	justify-content: space-between;
+	width: 90vw;
+	margin: 0 auto;
 }
 .select-city {
 	width: 400px;

@@ -26,7 +26,6 @@ const store = new Vuex.Store({
     },
     selectedCard(state, weather) {
       state.selectedCard = weather;
-      console.log('selectedCard', state.selectedCard);
     },
   },
   actions: {
@@ -35,9 +34,20 @@ const store = new Vuex.Store({
       commit('loadCities', data);
     },
     async loadSelected({ commit }) {
-      const data = await getSelectedCities();
-      console.log(data);
-      commit('loadSelectedCities', data);
+      let cities = [];
+      console.log(localStorage.getItem('cities'));
+      if (localStorage.getItem('cities')) {
+        try {
+          cities = JSON.parse(localStorage.getItem('cities'));
+        } catch (e) {
+          localStorage.removeItem('cities');
+          cities = await getSelectedCities();
+        }
+      } else {
+        cities = await getSelectedCities();
+      }
+      console.log(cities);
+      commit('loadSelectedCities', cities);
     },
     addCity({ state, commit }, id) {
       const ity = state.selectedCities.find(item => item.id === id);
@@ -45,6 +55,10 @@ const store = new Vuex.Store({
         const city = state.cities.find(item => item.id === id);
         commit('addSelectedCity', city);
       }
+    },
+    saveSelectedCities({ state }) {
+      const parsed = JSON.stringify(state.selectedCities);
+      localStorage.setItem('cities', parsed);
     },
   },
 });

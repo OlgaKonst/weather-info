@@ -1,10 +1,11 @@
 <template>
   <div class="city-card">
-    <div class="close-cart" @click="closeCard">Close</div>
-    <h2>Weather in {{ name }}, {{ country }}</h2>
-    <h4>{{temp}}&deg; C</h4>
+    <h2>Weather in </h2>   
     <p>{{currentDate}}</p>
+    <div class="control">
     <button type="button" @click="updateWeather">Update</button>
+    <router-link :to="{ name: 'CardsList' }"><button>Back</button></router-link>
+    </div>
   </div>
 </template>
 
@@ -14,15 +15,12 @@ import { mapActions } from 'vuex';
 import getWeather from '../api';
 
 export default {
-	name: 'CityCard',
-	props: {
-		id: Number,
-		name: String,
-		country: String,
-	},
+	name: 'CityInfo',
 	data() {
 		return {
-			temp: null,
+      name: '',
+      temp: null,
+      country: '',
 		};
 	},
 	computed: {
@@ -36,20 +34,13 @@ export default {
 	methods: {
 		async updateWeather() {
 			const weather = await getWeather(this.id);
-			this.temp = (weather.list[0].main.temp - 273.15).toFixed(0);
-			console.log(weather);
+     // this.temp = (weather.list[0].main.temp - 273.15).toFixed(0);
+      //this.name = weather.city.name;
+      //this.country = weather.city.country;
+			console.log('weather', weather);
     },
-    closeCard() {
-      this.$store.dispatch('closeCard', this.id);
-    }
 	},
 	mounted() {
-		/* this.$store.dispatch('load');
-    const updateWeather = async () => {
-      const weather = await getWeather(this.id);
-      this.temp = (weather.list[0].main.temp - 273.15).toFixed(0);
-      console.log(weather)
-    } */
 		this.updateWeather();
 	},
 };
@@ -61,15 +52,12 @@ export default {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	width: 300px;
-	border: 1px solid green;
+	width: 600px;
+	background-color: #fff;
 	padding: 10px;
-	margin: 5px 5px 15px;
+	margin: 0 auto;
 }
-.close-cart {
-	width: 100px;
-	border: 1px solid blue;
-	align-self: flex-end;
-  cursor: pointer;
+.control {
+  margin-top: auto;
 }
 </style>
