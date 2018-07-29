@@ -45,30 +45,12 @@
     }
   },
   {
-    "id": 710791,
-    "name": "Cherkasy",
-    "country": "UA",
-    "coord": {
-      "lon": 32.062069,
-      "lat": 49.428539
-    }
-  },
-  {
     "id": 706369,
     "name": "Khmelnytskyy",
     "country": "UA",
     "coord": {
       "lon": 26.996531,
       "lat": 49.421612
-    }
-  },
-  {
-    "id": 700569,
-    "name": "Mykolayiv",
-    "country": "UA",
-    "coord": {
-      "lon": 31.9974,
-      "lat": 46.965912
     }
   },
   {

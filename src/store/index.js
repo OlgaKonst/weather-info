@@ -9,23 +9,23 @@ const store = new Vuex.Store({
   state: {
     cities: [],
     selectedCities: [],
-    selectedCard: {},
+    cityId: null,
   },
   mutations: {
     loadCities(state, cities) {
-      state.cities = cities;
+      state.cities = cities.sort((a, b) => a.name.toLowerCase() > b.name.toLowerCase());
     },
     loadSelectedCities(state, cities) {
       state.selectedCities = cities;
     },
     addSelectedCity(state, city) {
-      state.selectedCities.push(city);
+      state.selectedCities.unshift(city);
     },
     removeCity(state, id) {
       state.selectedCities = state.selectedCities.filter(item => item.id !== id);
     },
-    selectedCard(state, weather) {
-      state.selectedCard = weather;
+    saveSelectedId(state, id) {
+      state.cityId = id;
     },
   },
   actions: {
@@ -35,7 +35,6 @@ const store = new Vuex.Store({
     },
     async loadSelected({ commit }) {
       let cities = [];
-      console.log(localStorage.getItem('cities'));
       if (localStorage.getItem('cities')) {
         try {
           cities = JSON.parse(localStorage.getItem('cities'));
@@ -46,16 +45,16 @@ const store = new Vuex.Store({
       } else {
         cities = await getSelectedCities();
       }
-      console.log(cities);
       commit('loadSelectedCities', cities);
     },
     addCity({ state, commit }, id) {
-      const ity = state.selectedCities.find(item => item.id === id);
-      if (ity === undefined) {
-        const city = state.cities.find(item => item.id === id);
+      const idx = state.selectedCities.find((item) => item.id === id);
+      if (idx === undefined) {
+        const city = state.cities.find((item) => item.id === id);
         commit('addSelectedCity', city);
       }
     },
+
     saveSelectedCities({ state }) {
       const parsed = JSON.stringify(state.selectedCities);
       localStorage.setItem('cities', parsed);

@@ -36,48 +36,12 @@
     }
   },
   {
-    "id": 3094325,
-    "name": "Kuchary",
-    "country": "PL",
-    "coord": {
-      "lon": 19.383329,
-      "lat": 52.150002
-    }
-  },
-  {
-    "id": 6255149,
-    "name": "North America",
-    "country": "",
-    "coord": {
-      "lon": -100.546883,
-      "lat": 46.073231
-    }
-  },
-  {
     "id": 3575514,
     "name": "Brumaire",
     "country": "KN",
     "coord": {
       "lon": -62.73333,
       "lat": 17.299999
-    }
-  },
-  {
-    "id": 1861387,
-    "name": "Ishikawa-ken",
-    "country": "JP",
-    "coord": {
-      "lon": 136.770493,
-      "lat": 36.77145
-    }
-  },
-  {
-    "id": 1857578,
-    "name": "Matoba",
-    "country": "JP",
-    "coord": {
-      "lon": 133.949997,
-      "lat": 34.25
     }
   },
   {

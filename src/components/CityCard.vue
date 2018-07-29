@@ -1,13 +1,15 @@
 <template>
   <div class="city-card" @click="showMoreInfo($event)">
+    <router-link :to="{ name: 'City', params: { id: id } }" class="router-link">
       <div class="info">
-        <h3>Weather in {{ name }}, {{ country }}</h3>
+        Weather in <h3>{{ name }}, {{ country }}</h3>
         <h4>{{temp}}&deg; C</h4>
-        <p>{{currentDate}}</p>
+        <p>{{date}}</p>
       </div>
+    </router-link>
     <div class="control">
-      <button type="button" @click="closeCard" class="btn">Close</button>
-      <button type="button" @click="updateWeather" class="btn">Update</button>
+      <button type="button" @click="closeCard" class="btn btn-info btn-close">Close</button>
+      <button type="button" @click="updateWeather" class="btn btn-info">Update</button>
     </div>
   </div>
 </template>
@@ -27,28 +29,25 @@ export default {
 	data() {
 		return {
 			weather: {},
-			temp: null,
+      temp: null,
+      date: null,
 		};
-	},
-	computed: {
-		currentDate() {
-			const date = new Date();
-			const locale = 'en-us';
-			const month = date.toLocaleString(locale, { month: 'short' });
-			return `${date.getHours()}:${date.getMinutes()} ${month} ${date.getDate()}`;
-		},
 	},
 	methods: {
 		async updateWeather() {
 			this.weather = await getWeather(this.id);
-			this.temp = (this.weather.list[0].main.temp - 273.15).toFixed(0);
+      this.temp = (this.weather.list[0].main.temp - 273.15).toFixed(0);
+      const date = new Date();
+			const locale = 'en-us';
+      const month = date.toLocaleString(locale, { month: 'short' });
+      this.date = `${date.getHours()}:${date.getMinutes()} ${month} ${date.getDate()}`;
 		},
 		closeCard() {
       this.$store.commit('removeCity', this.id);
       this.$store.dispatch('saveSelectedCities');
 		},
 		showMoreInfo(e) {
-		  this.$store.commit('selectedCard', this.weather);
+		  this.$store.commit('saveSelectedId', this.id);
 		},
 	},
 	mounted() {
@@ -67,7 +66,8 @@ export default {
 	padding: 10px;
 	margin: 5px 5px 15px;
   padding: 20px 10px;
-  background-color: #fff;
+  background-color: #f2ebeb;
+  border-radius: 5px;
 }
 .btn {
 	width: 100px;
@@ -79,11 +79,14 @@ export default {
   display: flex;
 	text-decoration: none;
 	color: #2c3e50;
-  	flex-direction: column;
+  flex-direction: column;
 	justify-content: space-between;
   align-items: center;
 }
 .control {
   margin-top: auto;
+}
+.btn-close {
+  margin-right: 20px;
 }
 </style>

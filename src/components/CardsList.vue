@@ -2,12 +2,10 @@
   <div>
     <form class="select-city">
     <div class="form-group">
-      <label for="cities">Select a city</label>
-      <select class="form-control" id="cities" v-model="city" @change="addCity($event)">
+      <label for="cities" class="select-label">Select a city</label>
+      <select class="form-control" id="cities" v-model="city" @change="addCity($event)" ref="select">
         <option v-for="city in cities" :key="city.id" :value="city.id">
-          <router-link :to="{ name: 'City', params: { id: city.id } }">
             {{city.name}}
-          </router-link>
         </option>
       </select>
     </div>
@@ -25,7 +23,7 @@ import CityCard from '@/components/CityCard';
 import { mapState, mapActions } from 'vuex';
 
 export default {
-	name: 'CadrsList',
+	name: 'CardsList',
 	components: {
 		CityCard,
 	},
@@ -41,6 +39,13 @@ export default {
 		addCity(e) {
 			this.$store.dispatch('addCity', this.city);
 			this.$store.dispatch('saveSelectedCities');
+		},
+	},
+	watch: {
+		city() {
+			console.log('this.city ', this.city);
+			this.$store.commit('saveSelectedId', this.city);
+			this.$router.push({ name: 'City', params: { id: this.city } });
 		},
 	},
 	mounted() {
@@ -59,12 +64,15 @@ export default {
 	display: flex;
 	align-items: stretch;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: center;
 	width: 90vw;
 	margin: 0 auto;
 }
 .select-city {
 	width: 400px;
 	margin: 20px auto;
+}
+.select-label {
+	font-size: 26px;
 }
 </style>
