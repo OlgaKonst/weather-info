@@ -4,7 +4,7 @@
     <div class="form-group">
       <label for="cities" class="select-label">Select a city</label>
       <select class="form-control" id="cities" v-model="city"
-       @change="addCity($event)" ref="select">
+       @change="addCity($event)">
         <option v-for="city in cities" :key="city.id" :value="city.id">
             {{city.name}}
         </option>
