@@ -3,7 +3,8 @@
     <form class="select-city">
     <div class="form-group">
       <label for="cities" class="select-label">Select a city</label>
-      <select class="form-control" id="cities" v-model="city" @change="addCity($event)" ref="select">
+      <select class="form-control" id="cities" v-model="city"
+       @change="addCity($event)" ref="select">
         <option v-for="city in cities" :key="city.id" :value="city.id">
             {{city.name}}
         </option>
@@ -23,27 +24,26 @@ import CityCard from '@/components/CityCard';
 import { mapState, mapActions } from 'vuex';
 
 export default {
-	name: 'CardsList',
+  name: 'CardsList',
 	components: {
 		CityCard,
 	},
 	data() {
 		return {
-			city: '',
-		};
+		  city: '',
+    };
 	},
-	computed: {
+  computed: {
 		...mapState(['cities', 'selectedCities']),
 	},
-	methods: {
+  methods: {
 		addCity(e) {
 			this.$store.dispatch('addCity', this.city);
 			this.$store.dispatch('saveSelectedCities');
 		},
 	},
-	watch: {
+  watch: {
 		city() {
-			console.log('this.city ', this.city);
 			this.$store.commit('saveSelectedId', this.city);
 			this.$router.push({ name: 'City', params: { id: this.city } });
 		},

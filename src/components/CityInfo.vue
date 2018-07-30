@@ -1,9 +1,11 @@
 <template>
   <div class="city-card">
-    <h2>Weather in {{ name }}, {{ country }}</h2> 
+    <div class="title">
+      Weather in {{ name }}, {{ country }}
+    </div>
     <div class="weather-info">
-    <h4>{{temp}}&deg; C</h4>
-    {{ description }}
+    <div class="temperature">{{temp}}&deg; C</div>
+    <div class="description">{{ description }}</div>
     <p>{{currentDate}}</p>
     <table class="table table-bordered table-striped">
       <tbody>
@@ -99,10 +101,22 @@ export default {
 	width: 300px;
 	margin: 0 auto;
 }
+.title {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
 .control {
 	margin-top: auto;
 }
 .btn-update {
   margin-left: 20px;
+}
+.description {
+  font-style: italic;
+  margin: 5px 0;
+}
+.temperature {
+  font-size: 24px;
 }
 </style>

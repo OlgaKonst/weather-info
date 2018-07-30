@@ -1,7 +1,7 @@
 /* eslint no-console: ["error", { allow: ["warn", "error"] }] */
 /* eslint-disable */
 import citiesList from './data/list.json';
-import selectedCities from './data/cities.json';
+import selectedCities from './data/selected-cities.json';
 
 const HOST = 'http://api.openweathermap.org/data/2.5/forecast?id';
 const key = '7f8d0fa8d3226d1b4eded55c785b46fb';

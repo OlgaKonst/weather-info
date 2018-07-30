@@ -48,13 +48,12 @@ const store = new Vuex.Store({
       commit('loadSelectedCities', cities);
     },
     addCity({ state, commit }, id) {
-      const idx = state.selectedCities.find((item) => item.id === id);
+      const idx = state.selectedCities.find(item => item.id === id);
       if (idx === undefined) {
-        const city = state.cities.find((item) => item.id === id);
+        const city = state.cities.find(item => item.id === id);
         commit('addSelectedCity', city);
       }
     },
-
     saveSelectedCities({ state }) {
       const parsed = JSON.stringify(state.selectedCities);
       localStorage.setItem('cities', parsed);

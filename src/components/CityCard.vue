@@ -2,8 +2,8 @@
   <div class="city-card" @click="showMoreInfo($event)">
     <router-link :to="{ name: 'City', params: { id: id } }" class="router-link">
       <div class="info">
-        Weather in <h3>{{ name }}, {{ country }}</h3>
-        <h4>{{temp}}&deg; C</h4>
+        Weather in <div class="title">{{ name }}, {{ country }}</div>
+        <div class="temperature">{{temp}}&deg; C</div>
         <p>{{date}}</p>
       </div>
     </router-link>
@@ -74,7 +74,12 @@ export default {
 	align-self: flex-end;
 	cursor: pointer;
 }
-
+.title {
+  font-size: 28px;
+}
+.temperature {
+  font-size: 24px;
+}
 .router-link {
   display: flex;
 	text-decoration: none;
